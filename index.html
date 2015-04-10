@@ -1,0 +1,23 @@
+<html>
+<head>
+  <title>Jaavascript MVC</title>
+</head>
+<body>
+  <button id="do-shit">do some shit</button>
+  <span></span>
+</body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="./javascripts/namespace.js"></script>
+<script type="text/javascript" src="./javascripts/alert/views.js"></script>
+<script type="text/javascript" src="./javascripts/alert/model.js"></script>
+<script type="text/javascript" src="./javascripts/alert/controller.js"></script>
+<script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', function() {
+    var views = new MVC.Alert.Views()
+    var model = new MVC.Alert.Model()
+    var controller = new MVC.Alert.Controller(model, views)
+
+    controller.initialize()
+  });
+</script>
+</html>
